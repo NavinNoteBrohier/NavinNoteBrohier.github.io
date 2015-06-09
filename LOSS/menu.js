@@ -7,7 +7,7 @@ function Menu()
 	context.drawImage(WallY.image,CANVASWIDTH/2 + CANVASWIDTH/3 + 160,CANVASHEIGHT/2 - CANVASHEIGHT/2)
 	context.drawImage(WallX.image,CANVASWIDTH/2-CANVASWIDTH/2, CANVASHEIGHT/4-160)
 	context.drawImage(WallX.image,CANVASWIDTH/2-CANVASWIDTH/2, CANVASHEIGHT-20)
-	context.drawImage(MenuItem1.image,CANVASWIDTH/2, CANVASHEIGHT-20)
+	//context.drawImage(MenuItem1.image,CANVASWIDTH/2, CANVASHEIGHT-20)
 	// INTERACTABLE OBJECTS
 	
 	//ELEMENTS
