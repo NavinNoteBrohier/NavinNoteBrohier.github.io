@@ -1,0 +1,13 @@
+body
+				{
+					text-align: center;
+					background: -webkit-linear-gradient(left, white , purple);
+					background: -o-linear-gradient(right, white, purple); 
+					background: -moz-linear-gradient(right, white, purple); 
+					background: linear-gradient(to right, white, purple); 
+				}
+				
+				h1
+				{
+					font-family : "impact";
+				}
