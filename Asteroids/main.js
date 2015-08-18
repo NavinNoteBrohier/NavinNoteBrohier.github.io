@@ -1,7 +1,10 @@
 //Navin Brohier
 // idmtcert2 || AIECertificate2
-// clocke555@gmail.com
-
+// 
+//
+//Better background / sprites
+//Collision
+//Game States.
 
 var canvas = document.getElementById("gameCanvas");
 var context = canvas.getContext("2d");
@@ -34,9 +37,10 @@ var GameState = STATE_SPLASH;
 var PLAYER_LIVES = 3;
 var lastUpdate = Date.now();
 var splashTimer = 3;
+var endTimer = 3;
 //var SCORE = 0;
 var Background = document.createElement("img");
-	Background.src = "background.png";
+	Background.src = "wallpaper.jpg";
 var player =
 {
 
@@ -45,8 +49,8 @@ var player =
 	x : SCREEN_WIDTH/2, 
 	y : SCREEN_HEIGHT/2,
 	
-	width : 40,
-	height : 47,
+	width : 50,
+	height : 50,
 	
 	directionX : 0,
 	directionY : 0,
@@ -57,7 +61,7 @@ var player =
 	points : 0
 };
 
-	player.image.src = "shipplayer.png" ;
+	player.image.src = "ship3.png" ;
 		
 var Asteroids = [] ;
 var AsteroidTimer = 0;
@@ -206,13 +210,14 @@ function runSplash(DeltaTime)
 
 	context.fillStyle = "#FFF";
 	context.font = "18px Arial";
-	context.fillText( "LOOK OUT ASTEROIDS!", SCREEN_HEIGHT/2, SCREEN_WIDTH/2);
+	context.fillText( "LOOK OUT ASTEROIDS!", SCREEN_HEIGHT/2, SCREEN_WIDTH/5);
 	
 	
 }
 
 function runGame(DeltaTime)
 {
+	endTimer = 3;
 //player
 		var s = Math.sin(player.rotation) ; 
 		var c = Math.cos(player.rotation) ; 
@@ -228,21 +233,21 @@ function runGame(DeltaTime)
 				player.rotation += player.angularDirection * PLAYER_ROTATE_SPEED ; 
 
 //wrap around	
-		if (player.x > 640)
+		if (player.x > 800)
 		{
 			player.x = 0
 		}
-		if (player.y > 480)
+		if (player.y > 600)
 		{
 			player.y = 0
 		}
 		if (player.x < 0)
-		{ player.x = 640
+		{ player.x = 800
 	
 		}
 		if (player.y < 0)
 		{
-			player.y = 480
+			player.y = 600
 		}
 		
 	
@@ -254,6 +259,9 @@ function runGame(DeltaTime)
 			context.rotate(player.rotation);
 			context.drawImage(player.image, -player.width/2, -player.height/2);
 		context.restore();
+		
+		context.style = "#fff200";
+		context.strokeRect(player.x,player.y,player.width,player.height)
 	}
 // Asteroids 	
 		for (var i = 0; i < Asteroids.length; i++)
@@ -351,7 +359,7 @@ function runGameOver(DeltaTime)
 	context.fillStyle = "#FFf";
 	context.font = "18px Arial";
 	context.fillText( "GAME OVER", SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
-
+	
 }
 
 function onKeyDown(event)
@@ -436,10 +444,7 @@ function run()
 };
 
 
-//-------------------- Don't modify anything below here
-// This code will set up the framework so that the 'run' function is
-// called 60 times per second. We have some options to fall back on
-// in case the browser doesn't support our preferred method.
+
 (function() {
  var onEachFrame;
  if (window.requestAnimationFrame) {

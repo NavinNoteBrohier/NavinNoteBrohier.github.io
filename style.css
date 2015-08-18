@@ -1,13 +1,70 @@
 body
-				{
-					text-align: center;
-					background: -webkit-linear-gradient(left, white , purple);
-					background: -o-linear-gradient(right, white, purple); 
-					background: -moz-linear-gradient(right, white, purple); 
-					background: linear-gradient(to right, white, purple); 
-				}
-				
-				h1
-				{
-					font-family : "impact";
-				}
+{
+	text-align: center;
+	background: -webkit-linear-gradient(left, #870bc1 , #8445a2);
+	background: -o-linear-gradient(right, #870bc1, #8445a2); 
+	background: -moz-linear-gradient(right, #870bc1, #8445a2); 
+	background: linear-gradient(to right, #870bc1, #8445a2); 
+	margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+		padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+	
+h1
+{
+	font-family : "impact";
+}
+	
+h2
+{
+	border-style : solid;
+	border-width : 10px;
+	padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+	margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+	text-align: center;
+	font-family : "Lucida Console";
+}
+
+h3
+{
+	font-family: "Lucida Console";
+}
+
+h4
+{
+	font-family: "Lucida Console";
+}
+
+a
+{
+	text-decoration:none;
+	color:#004a80 ; 
+	font-family: "Lucida Console";
+	font-size: 20px;
+	text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px #4549a2;
+}
+
+a:hover 
+{
+  	text-shadow: 1px 1px 2px #767ac6, 0 0 15px #1a21b1, 0 0 5px #7d83f8;
+}
+
+.CANVAS 
+{
+	padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+	font-size: 40px;
+}
