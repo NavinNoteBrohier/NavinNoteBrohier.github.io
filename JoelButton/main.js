@@ -5,7 +5,8 @@
  
 var music = new Howl
 ({
-  urls: ['joel.wav']
+  urls: ['joel.wav'],
+  loop: true
 })
  
 function MUSIC()
@@ -16,7 +17,7 @@ function MUSIC()
 		ISPLAYING = false;
 	}
 	
-	if(ISPLAYING == false)
+	else if(ISPLAYING == false)
 	{
 		music.play()
 		ISPLAYING = true
