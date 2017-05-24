@@ -61,7 +61,14 @@ img
 	cursor:default;
 }
 
+.SocialIcons img
+{
+	padding : 5px;
+	cursor:default;
+	
+}
+
 h3
 {
-
+	
 }
