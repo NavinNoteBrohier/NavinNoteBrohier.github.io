@@ -73,7 +73,7 @@ function SpawnClouds()
 {
 	var newCloud = {};
 	 
-	var Type = random(0,2);
+	var Type = random(0,3);
 
 	newCloud.image = document.createElement("img");
 
@@ -125,7 +125,7 @@ function run()
 
 function ChangePicture(ObjectRoll, OptionalLocation)
 {
-	ObjectRoll.src = "" + OptionalLocation;
+		ObjectRoll.src = OptionalLocation;
 }
 
 //DELTA TIME
