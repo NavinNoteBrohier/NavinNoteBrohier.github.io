@@ -1,6 +1,7 @@
 var canvas = document.getElementById("BGCanvas");
 var context = canvas.getContext("2d");
 
+
 context.canvas.width  = window.innerWidth;
 context.canvas.height = window.innerHeight;
 
@@ -122,6 +123,10 @@ function run()
 	else Initialize();
 }
 
+function ChangePicture(ObjectRoll, OptionalLocation)
+{
+	ObjectRoll.src = "" + OptionalLocation;
+}
 
 //DELTA TIME
 
@@ -161,3 +166,4 @@ window.mozRequestAnimationFrame(_cb); }
 })();
 window.onEachFrame(run);
 //
+
