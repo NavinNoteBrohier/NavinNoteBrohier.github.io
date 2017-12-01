@@ -25,7 +25,7 @@ var BunchofClouds = [];
 
 function Initialize()
 {
-	NumClouds = random(5,10);
+	NumClouds = random(10,20);
 		
 
 	for(var i = 0; i < NumClouds; i++)

@@ -61,14 +61,78 @@ img
 	cursor:default;
 }
 
-.SocialIcons img
+.SocialIcons
 {
 	padding : 5px;
 	cursor:default;
-	
+	display: inline-block;
+}
+
+.SocialIcons .Twitter  
+{
+	position: relative;
+    display: inline-block;
+}
+
+.SocialIcons .Twitter .ImageTop 
+{
+	display: none;
+    position: absolute;
+	top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.SocialIcons .Twitter:hover .ImageTop
+{
+	display: inline;
+}
+
+.SocialIcons .Github  
+{
+	position: relative;
+    display: inline-block;
+}
+
+.SocialIcons .Github .ImageTop 
+{
+	display: none;
+    position: absolute;
+	top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.SocialIcons .Github:hover .ImageTop
+{
+	display: inline;
+}
+
+.FolioPieces .UnderImage 
+{
+	position:relative;
+	top: 1%;
+	z-index: -1;
+	width:75%;
+	height:75%
+}
+
+table
+{
+	top:50;
+	left:50;
 }
 
 h3
 {
-	
+	position:static;
+	top:50%;
+	left:50%;
+	transform:translate(-50,50);
+	padding-top: 25px;
+}
+
+tr
+{
+	position:absolute;
 }
