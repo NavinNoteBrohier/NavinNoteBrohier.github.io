@@ -17,6 +17,9 @@ var Init = false;
 var X = 10; 
 var Y = 10;
 
+var MinSpeed = 1;
+var MaxSpeed = 3;
+
 var DefaultImage = document.createElement("img");
 	DefaultImage.src = "JS_WEB/Resources/cloud.png";
 var NumClouds;
@@ -50,7 +53,7 @@ function main(DeltaTime)
 		{
 			BunchofClouds[i].y = Height;
 			BunchofClouds[i].x = random(-350,Width + 350);
-			BunchofClouds[i].speed = random(1,10);
+			BunchofClouds[i].speed = ReturnSpeed();
 		}
 		context.drawImage(BunchofClouds[i].image, BunchofClouds[i].x, BunchofClouds[i].y);
 	}
@@ -101,9 +104,14 @@ function SpawnClouds()
 		break;
 	}
 
-	newCloud.speed = random(1,10);
+	newCloud.speed = ReturnSpeed()
 	BunchofClouds.push(newCloud);
 
+}
+
+function ReturnSpeed()
+{
+	return random(MinSpeed,MaxSpeed);
 }
 
 function ResizeCanvas()
@@ -121,11 +129,6 @@ function run()
 {
 	if(Init)main(getDeltaTime);
 	else Initialize();
-}
-
-function ChangePicture(ObjectRoll, OptionalLocation)
-{
-		ObjectRoll.src = OptionalLocation;
 }
 
 //DELTA TIME
